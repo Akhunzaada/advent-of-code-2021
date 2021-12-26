@@ -16,3 +16,8 @@ fun readInputAsInts(name: String) = File("src", "$name.txt").readLines().map { i
  * Converts string to md5 hash.
  */
 fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
+
+/**
+ * Inverts bits in a binary string.
+ */
+fun String.invertBinary(): String = this.map { if (it == '0') '1' else '0' }.joinToString("")
