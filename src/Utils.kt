@@ -3,6 +3,11 @@ import java.math.BigInteger
 import java.security.MessageDigest
 
 /**
+ * Reads handler to the given input txt file.
+ */
+fun openFile(name: String) = File("src", "$name.txt")
+
+/**
  * Reads lines from the given input txt file.
  */
 fun readInput(name: String) = File("src", "$name.txt").readLines()
